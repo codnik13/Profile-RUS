@@ -1,0 +1,144 @@
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body,html{
+  width: 100vw;
+  height: auto;
+}
+body{
+  font-size: 1.2em;
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color:whitesmoke;
+}
+#aside, #main{
+  height: inherit;
+  padding: 2vh 2vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  row-gap: 2vh;
+}
+#aside{
+	width: 30vw;
+	align-items: start;
+}
+#main{
+	width: 70vw;
+	align-items: end;
+	background-color: white;
+}
+#name{
+  text-align: center;
+  padding-right: 20vw;
+}
+#contacts, #form{
+  text-align: center;
+}
+#summary, #pets{
+  width: 100%;
+  line-height: 4.2vh;
+}
+td{
+  padding: .2vh .2vh;
+  text-align: start;
+}
+img:not(#foto){
+  height: auto;
+  width: 3.2vh;
+}
+form{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: start;
+  row-gap: .5vh;
+}
+.form{
+  outline: none;
+  font-size: 1em;
+  border-radius: 1vh;
+}
+input{
+  height: 4vh;
+  text-align: center;
+}
+.form:not(input[type=submit]):hover{
+  border: .2vh solid lightseagreen;
+}
+.form:not(input[type=submit]){
+  border: .1vh dashed #999;
+  width: 25vw;
+  padding: 0 .5vw;
+}
+textarea{
+  padding: 1vh 1vw;
+  width: 25vw;
+}
+input[type=submit]{
+  width: 6vw;
+  font-variant: small-caps;
+  background-color: palegreen;
+  border: none;
+}
+input[type=submit]:hover{
+  background-color: lightseagreen;
+}
+li{
+  margin-left: 2vw;;
+}
+.td{
+	padding-left: 1vw;
+	vertical-align: middle;
+}
+#pets li{
+	margin-top: 2vh;
+}
+.show{
+	display: none;
+}
+@media only screen and (max-width: 768px){
+  body{
+    width: 100vw;
+    overflow: auto;
+    font-size: .8em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    row-gap: 2.5vh;
+  }
+  #aside, #main{
+	align-items: start;
+	width: 90vw;
+	background-color: white;
+  }
+  img:not(#Foto){
+    height: auto;
+    width: 3.2vw;
+  }
+td{
+  padding: .3vw .8vw;
+}
+#summary, #pets, #{
+  width: 90vw;
+}
+#inf{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	width: 70vw;
+}
+.hide{
+	display: none;
+}
+.show{
+	display: block;
+}
+}
