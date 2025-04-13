@@ -17,7 +17,7 @@ body{
   background-color:whitesmoke;
 }
 #aside, #main{
-  height: inherit;
+  height: 100vh;
   padding: 2vh 2vw;
   display: flex;
   flex-direction: column;
