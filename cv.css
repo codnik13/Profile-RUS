@@ -48,7 +48,7 @@ td{
   padding: .2vh .2vh;
   text-align: start;
 }
-img:not(#foto){
+img:not(#foto,.pic>img){
   height: auto;
   width: 3.2vh;
 }
@@ -99,6 +99,23 @@ li{
 #pets li{
 	margin-top: 2vh;
 }
+.pet{
+	box-shadow: 0 0.2vh 1vw 0 rgba(2, 2, 2, .2), 0 0.2vh 1vw 0 rgba(2, 2, 2, 0.1);
+	margin-bottom: 2vh;
+	width:100%;
+	height: auto;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: left;
+}
+.caption{
+	padding-left: 1vw;
+	font-style: italic;
+}
+.pic img{
+	width: 12vh; height: auto; border-radius: 50%;
+}
 .show{
 	display: none;
 }
@@ -125,7 +142,7 @@ li{
 td{
   padding: .3vw .8vw;
 }
-#summary, #pets, #{
+#summary, #pets{
   width: 90vw;
 }
 #inf{
