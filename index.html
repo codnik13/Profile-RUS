@@ -7,62 +7,65 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
   <title>Резюме</title>
 </head>
-<body onbeforeunload ="reset();">
+<body onbeforeunload ="reset();" onload="sizer();">
   <section id="aside">
-  <img class="hide" id="foto" style="height: auto; width: 20%; border-radius:50%;" src="foto.jpg"/>
-  <div class="show" id="Name">Александр Полуянов</br><b>Backend/Frontend/DevOps</b></div>
+	<div class="person">
+  		<img id="foto" style="height: auto; width: 20%; border-radius:50%;" src="foto.jpg"/>
+  		<div id="name">Александр Полуянов</br><b>Backend</b> / <b>Frontend</b></div>
+	</div>
   <div id="inf">
   <table id="contacts" style="border-collapse: collapse;">
     <tr> <td><img src="phone.png"/></td><td class="td">+7(996)-335-73-45</td></tr>
     <tr> <td><img src="email.png"/></td><td class="td">postalbox112000@gmail.com</td> </tr>
     <tr> <td><img src="github.png"/></td><td class="td"><a href="https://github.com/codnik13" target="_blank">GitHub</a></td> </tr>
 	<tr> <td><img src="teleg.png"/></td><td class="td">@Takoyuser</td> </tr>
-	<tr> <td><img src="home.png"/></td><td class="td">Альметьевск, Россия</td> </tr>
+	<tr> <td><img src="home.png"/></td><td class="td">Альметьевск, РФ</td> </tr>
   </table>
-  <img class="show" id="Foto" style="height: auto; width: 12%;" src="foto.png"/>
   </div>
   <ul>
-	<div><b>Навыки в IT</b></div>
+	<div style="width:100%; text-align:left; padding-left: 3%; margin-bottom:1vh;"><b>Навыки в IT</b></div>
 	<li>Python, Django, Flask, FastApi, Aiogram, SQLAlchemy</li>
 	<li>C, C++, Qt</li>
 	<li>JavaScript, jQuery, Ajax, React, HTML, CSS</li>
 	<li>Java, Spring Boot</li>
 	<li>SQL, SQLite, PostreSQL</li>
 	<li>Git, GitHub, GitLab, Docker</li>
-	<LI>Excel, Google Sheets, AppScript</LI>
+	<li>Excel, Google Sheets, AppScript</li>
 	<li>Windows, Powershell, Linux, Bash etc.</li>
   </ul>
   <ul>
-	<div><b>Образование</b></div>
-	<li>Высшее: по специальности Геолог, КФУ</li>
+	<div style="width:100%; text-align:left; padding-left: 3%; margin-bottom:1vh;"><b>Образование</b></div>
+	<li>Высшее геологическое, КФУ</li>
 	<li>Software Developer, School 21</li>
 	<li>English Language Translator, КФУ</li>
   </ul>
   <form class="hide" id="form" action="https://api.web3forms.com/submit" method="POST">
     <input type="hidden" name="access_key" value="6029fa72-a5bd-4805-b02c-80fdf99243ab">
-    <div><b>Обратная связь</b></b>
+    <div>Ваш отзыв</b>
     <input class="form" type="text" name="name" placeholder="имя" maxlength="40" required>
     <input class="form" type="email" name="email" placeholder="эл. почта" maxlength="40" required>
-    <textarea class="form" rows="8" name="message" placeholder="сообщение" required></textarea>
-    <input class="form" type="submit" name="send" value="отправка"/>
+    <textarea class="form" rows="7" name="message" placeholder="текст сообщения" required></textarea>
+    <input class="form" type="submit" name="send" value="готово"/>
   </form>
   </section>
-  <section id="main">
+  <section id="main" onchange="sizer();">
     <ul id="summary">
-		<div class="hide" id="name">Александр Полуянов</br><b>Backend/Frontend/DevOps</b></div>
-		<li>По окончании Университета работал в нефтедобывающей отрасли</li>
+		<div style="width:100%; text-align:left; padding-left: 3%; margin-bottom:1vh;"><b>Кратко о себе</b></div>
 		<li>
-			Программировать учился самостоятельно и в Школе 21, практиковался на наиболее популярных языках: Python, JavaScript, C, C++, Java.
-			Есть опыт работы с Frontend, Backend и DevOps инструментами. Кроме того, выполнял заказы по оптимизации и автоматизации заполнения 
-			отчетности в Google-таблицах посредством платформы AppScript
+			Свой путь в IT начинал, ещё работая в нефтедобывающей отрасли. Программировать учился самостоятельно и в Школе 21, 
+			практиковался на наиболее популярных языках: Python, JavaScript, C, C++, Java, приобрёл опыт разработки frontend, backend и fullstack приложений. 
+			Кроме того, выполнял проекты по оптимизации и автоматизации заполнения отчетности в Google-таблицах посредством платформы AppScript.
 		</li>
-		<li>Дополнительно занимался письменными переводами с английского на русский и наоборот</li>
-		<li>Выполнял работы для локальных организаций по автоматизации заполнения отчётов, есть использования Frontend, Backend и DevOps инструментов</li>
+		<li>Дополнительно, будучи фрилансером, занимался письменными переводами рус-анг/анг-рус, а также писал рефераты и статьи</li>
+		<li>
+			В IT индустрии интересуют такие направления как разработка клиент-серверных приложений, драйверов и прикладного ПО, 
+			аналитика данных, работа с СУБД и таблицами, машинное обучение и искусственный интеллект, графический дизайн, конструирование и верстка сайтов
+		</li>
 	</ul>
   <p id="pets">
-    <h3><b>Примеры проектов</b></h3>
+    <div style="width:100%; text-align:left; padding-left: 3%;"><b>Примеры проектов</b></div>
 	<div class="pet">
-		<a class="pic" href="https://github.com/codnik13/Cafe-Bot-Telegram-Aiogram-Python-RUS"><img src="welcome.png"/></a>
+		<a class="pic" href="https://github.com/codnik13/Cafe-Bot-Telegram-Aiogram-Python-RUS"><img src="pizza.jpg"/></a>
 		<div class="caption">Телеграм-бот для размещения заказов</div>
 	</div>
 	<div class="pet">
@@ -77,6 +80,18 @@
 		<a class="pic" href="https://github.com/codnik13/Simple-Browser-Game-JS-HTML-CSS"><img src="game.jpg"/></a>
 		<div class="caption">Игра, запускается в браузере</div>
 	</div>
+	<div class="pet">
+		<a class="pic" href="https://github.com/codnik13/3D-Viewer-C-Makefile-Qt"><img src="viewer.jpg"/></a>
+		<div class="caption">Программа для просмотра и настройки изображений</div>
+	</div>
+	<div class="pet">
+		<a class="pic" href="https://github.com/codnik13/TicTacToe-Java-SpringBoot"><img src="tictac.jpg"/></a>
+		<div class="caption">Игра, запускается в браузере</div>
+	</div>
+	<div class="pet">
+		<a class="pic" href="https://github.com/codnik13/Rogue-Game-Java"><img src="rogue.jpg"/></a>
+		<div class="caption">Игра, запускается в терминале</div>
+	</div>
 </p>
   </section>
 </body>
@@ -85,6 +100,11 @@
     document.getElementsByClassName("fm")[0].value="";
     document.getElementsByClassName("fm")[1].value="";
     document.getElementsByClassName("fm")[2].value="";
+  }
+  function sizer(){
+	height=document.getElementById('main').scrollHeight;
+	document.getElementsByTagName('html')[0].scrollHeight=height;
+	
   }
 </script>
 </html>

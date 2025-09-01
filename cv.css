@@ -3,91 +3,98 @@
   padding: 0;
   margin: 0;
 }
-body,html{
-  width: 100vw;
-  height: auto;
+html{
+	position: relative;
+	left:0;
+	top:0;
 }
 body{
   font-size: 1.2em;
   font-family: "Roboto", sans-serif;
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: start;
   justify-content: space-between;
   background-color:whitesmoke;
 }
 #aside, #main{
-  height: 100vh;
   padding: 2vh 2vw;
   display: flex;
   flex-direction: column;
-  justify-content: stretch;
+  justify-content:stretch;
   row-gap: 2vh;
 }
 #aside{
-	width: 30vw;
+	width: 30%;
 	align-items: start;
 }
 #main{
-	width: 70vw;
+	width: 70%;
 	align-items: end;
 	background-color: white;
-}
-#name{
-  text-align: center;
-  padding-right: 20vw;
 }
 #contacts, #form{
   text-align: center;
 }
 #summary, #pets{
   width: 100%;
-  line-height: 4.2vh;
+}
+.person{
+	display: flex;
+	flex-direction: row;
+	justify-content: left;
+	align-items: center;
+}
+#name{
+  text-align: center;
+  padding-left: 2vw;
 }
 td{
-  padding: .2vh .2vh;
+  padding: .1vh .2vh;
   text-align: start;
 }
 img:not(#foto,.pic>img){
   height: auto;
-  width: 3.2vh;
+  width: 3vh;
 }
-form{
+#form{
+	position: absolute;
+	left: 0;
+  	bottom: 1vh;
+	width:30%;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  align-items: start;
-  row-gap: .5vh;
 }
 .form{
   outline: none;
   font-size: 1em;
   border-radius: 1vh;
 }
-input{
-  height: 4vh;
-  text-align: center;
-}
 .form:not(input[type=submit]):hover{
-  border: .2vh solid lightseagreen;
+	border: .2vh solid seagreen;
 }
 .form:not(input[type=submit]){
-  border: .1vh dashed #999;
+  border: none;
   width: 25vw;
   padding: 0 .5vw;
+  box-shadow: 0 0 .1vw 0 rgba(2, 2, 2, .2), 0 0 .1vw 0 rgba(2, 2, 2, .2);
 }
-textarea{
-  padding: 1vh 1vw;
+input{
+	height: 3.5vh;
+}
+textarea, input{
   width: 25vw;
+  margin-bottom: 1vh;
 }
 input[type=submit]{
-  width: 6vw;
+  width: 5vw;
+  text-align: center;
   font-variant: small-caps;
   background-color: palegreen;
-  border: none;
+  border: .1vh solid seagreen;
 }
 input[type=submit]:hover{
-  background-color: lightseagreen;
+  background-color: seagreen;
 }
 li{
   margin-left: 2vw;;
@@ -100,7 +107,7 @@ li{
 	margin-top: 2vh;
 }
 .pet{
-	box-shadow: 0 0.2vh 1vw 0 rgba(2, 2, 2, .2), 0 0.2vh 1vw 0 rgba(2, 2, 2, 0.1);
+	box-shadow: 1vw 0.2vh 1vw 0 rgba(2, 2, 2, .1), 1vw 0.2vh 1vw 0 rgba(2, 2, 2, .1);
 	margin-bottom: 2vh;
 	width:100%;
 	height: auto;
@@ -108,12 +115,14 @@ li{
 	flex-direction: row;
 	align-items: center;
 	justify-content: left;
+	vertical-align:bottom;
 }
 .caption{
 	padding-left: 1vw;
 	font-style: italic;
 }
 .pic img{
+	border: 0.1vh solid crimson;
 	width: 12vh; height: auto; border-radius: 50%;
 }
 .show{
